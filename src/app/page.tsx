@@ -8,7 +8,7 @@ import { StickyBanner } from "@/components/StickyBanner";
 export default function Page() {
   return (
     <>
-      <main className="flex-1">
+      <main className="flex-1 pt-20">
         <Hero />
         <FeaturesRow />
         <MovementsRow />

@@ -12,7 +12,7 @@ export function StickyBanner() {
   }
 
   return (
-    <div className="pointer-events-none fixed inset-x-0 bottom-0 z-40 px-3 pb-3">
+    <div className="pointer-events-none fixed inset-x-0 top-0 z-40 px-3 pt-3">
       <div className="pointer-events-auto mx-auto flex max-w-md items-center gap-3 rounded-2xl bg-brand px-3 py-2.5 text-white shadow-[0_10px_30px_-10px_rgba(29,111,229,0.6)]">
         <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/15">
           <svg viewBox="0 0 32 32" className="h-5 w-5" fill="none" aria-hidden="true">
