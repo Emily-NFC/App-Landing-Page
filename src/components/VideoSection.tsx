@@ -1,3 +1,5 @@
+const VIDEO_ID = "AlW0mZy3m1E";
+
 export function VideoSection() {
   return (
     <section className="mx-auto max-w-md px-4 pb-4">
@@ -14,27 +16,22 @@ export function VideoSection() {
           </p>
         </div>
 
-        <div className="relative mx-4 mt-3 aspect-video overflow-hidden rounded-xl bg-gradient-to-br from-sky-300 via-cyan-200 to-blue-400">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.0),rgba(0,0,0,0.35))]" />
-          <button
-            type="button"
-            aria-label="Play intro video"
-            className="absolute inset-0 flex items-center justify-center"
-          >
-            <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white/95 shadow-lg">
-              <svg viewBox="0 0 24 24" className="ml-1 h-6 w-6 text-brand" fill="currentColor" aria-hidden="true">
-                <path d="M8 5v14l11-7z" />
-              </svg>
-            </span>
-          </button>
-          <div className="absolute bottom-2 right-2 rounded bg-black/70 px-2 py-0.5 text-[11px] font-semibold text-white">
-            1:00
-          </div>
+        <div className="relative mx-4 mt-3 aspect-video overflow-hidden rounded-xl bg-black">
+          <iframe
+            src={`https://www.youtube.com/embed/${VIDEO_ID}?rel=0`}
+            title="Fitness Court 1-minute intro"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+            className="absolute inset-0 h-full w-full"
+          />
         </div>
 
         <div className="p-4">
-          <button
-            type="button"
+          <a
+            href={`https://youtu.be/${VIDEO_ID}`}
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex w-full items-center justify-center gap-2 rounded-full bg-brand px-4 py-3 text-sm font-semibold text-white shadow-sm transition active:scale-[0.98] hover:bg-brand-dark"
           >
             <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white/20">
@@ -42,8 +39,8 @@ export function VideoSection() {
                 <path d="M8 5v14l11-7z" />
               </svg>
             </span>
-            Watch &amp; Download the App
-          </button>
+            Watch now
+          </a>
         </div>
       </div>
     </section>

@@ -10,7 +10,7 @@ export function MovementsRow() {
         <div className="mt-3 grid grid-cols-7 gap-1">
           {movements.map(({ name, Icon }) => (
             <div key={name} className="flex flex-col items-center gap-1.5">
-              <Icon className="h-8 w-8 text-brand" />
+              <Icon className="h-8 w-8" />
               <span className="text-[9px] font-semibold tracking-wide text-slate-600">{name}</span>
             </div>
           ))}

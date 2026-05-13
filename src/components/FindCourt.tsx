@@ -1,11 +1,13 @@
 export function FindCourt() {
   return (
     <section className="mx-auto max-w-md px-4 pb-24">
-      <a
-        href="#"
-        className="block overflow-hidden rounded-2xl bg-white shadow-[0_4px_18px_-6px_rgba(0,0,0,0.08)]"
-      >
-        <div className="flex items-center gap-3 p-4">
+      <div className="overflow-hidden rounded-2xl bg-white shadow-[0_4px_18px_-6px_rgba(0,0,0,0.08)]">
+        <a
+          href="https://www.nationalfitnesscampaign.com/map"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-3 p-4 transition active:bg-slate-50"
+        >
           <div className="flex-1">
             <h3 className="text-base font-bold leading-tight">Find another court near you</h3>
             <p className="mt-1 text-[12px] leading-snug text-slate-500">
@@ -30,18 +32,21 @@ export function FindCourt() {
           <svg viewBox="0 0 24 24" className="h-5 w-5 text-slate-400" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             <polyline points="9 6 15 12 9 18" />
           </svg>
-        </div>
-        <div className="border-t border-slate-100 px-4 py-2.5">
-          <span className="flex items-center gap-1.5 text-[12px] font-semibold text-brand">
-            <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-              <path d="M14 3h7v7" />
-              <path d="M10 14L21 3" />
-              <path d="M21 14v5a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h5" />
-            </svg>
-            More about NFC
-          </span>
-        </div>
-      </a>
+        </a>
+        <a
+          href="https://www.nationalfitnesscampaign.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-1.5 border-t border-slate-100 px-4 py-2.5 text-[12px] font-semibold text-brand transition active:bg-slate-50"
+        >
+          <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M14 3h7v7" />
+            <path d="M10 14L21 3" />
+            <path d="M21 14v5a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h5" />
+          </svg>
+          More about NFC
+        </a>
+      </div>
     </section>
   );
 }

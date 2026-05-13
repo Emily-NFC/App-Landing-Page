@@ -1,7 +1,9 @@
 export function AppStoreBadge({ className = "" }: { className?: string }) {
   return (
     <a
-      href="#"
+      href="https://apps.apple.com/us/app/fitness-court/id563421203"
+      target="_blank"
+      rel="noopener noreferrer"
       aria-label="Download on the App Store"
       className={`flex items-center justify-center gap-2 rounded-xl bg-black px-3 py-2.5 text-white shadow-sm transition active:scale-[0.98] ${className}`}
     >
@@ -19,7 +21,9 @@ export function AppStoreBadge({ className = "" }: { className?: string }) {
 export function GooglePlayBadge({ className = "" }: { className?: string }) {
   return (
     <a
-      href="#"
+      href="https://play.google.com/store/apps/details?id=com.nationalfitnesscampaign.FitnessCourtLive"
+      target="_blank"
+      rel="noopener noreferrer"
       aria-label="Get it on Google Play"
       className={`flex items-center justify-center gap-2 rounded-xl bg-black px-3 py-2.5 text-white shadow-sm transition active:scale-[0.98] ${className}`}
     >

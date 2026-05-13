@@ -1,4 +1,16 @@
+"use client";
+
+import { APP_STORE_URL, pickStoreUrl } from "@/lib/storeLinks";
+
 export function StickyBanner() {
+  function handleClick(event: React.MouseEvent<HTMLAnchorElement>) {
+    if (typeof navigator === "undefined") return;
+    const url = pickStoreUrl(navigator.userAgent);
+    if (url === APP_STORE_URL) return;
+    event.preventDefault();
+    window.open(url, "_blank", "noopener,noreferrer");
+  }
+
   return (
     <div className="pointer-events-none fixed inset-x-0 bottom-0 z-40 px-3 pb-3">
       <div className="pointer-events-auto mx-auto flex max-w-md items-center gap-3 rounded-2xl bg-brand px-3 py-2.5 text-white shadow-[0_10px_30px_-10px_rgba(29,111,229,0.6)]">
@@ -13,7 +25,10 @@ export function StickyBanner() {
           <div className="text-[11px] opacity-90">Get the app to start your 7-minute workout.</div>
         </div>
         <a
-          href="#"
+          href={APP_STORE_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={handleClick}
           className="shrink-0 rounded-full bg-white px-3.5 py-2 text-[12px] font-bold text-brand shadow-sm transition active:scale-[0.98]"
         >
           Get the App

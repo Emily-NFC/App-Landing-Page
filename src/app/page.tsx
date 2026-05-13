@@ -1,4 +1,3 @@
-import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { FeaturesRow } from "@/components/FeaturesRow";
 import { MovementsRow } from "@/components/MovementsRow";
@@ -9,7 +8,6 @@ import { StickyBanner } from "@/components/StickyBanner";
 export default function Page() {
   return (
     <>
-      <Header />
       <main className="flex-1">
         <Hero />
         <FeaturesRow />
