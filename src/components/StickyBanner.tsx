@@ -1,11 +1,16 @@
 "use client";
 
-import { APP_STORE_URL, pickStoreUrl } from "@/lib/storeLinks";
+import { trackEvent } from "@/lib/analytics";
+import { APP_STORE_URL, GOOGLE_PLAY_URL, pickStoreUrl } from "@/lib/storeLinks";
 
 export function StickyBanner() {
   function handleClick(event: React.MouseEvent<HTMLAnchorElement>) {
     if (typeof navigator === "undefined") return;
     const url = pickStoreUrl(navigator.userAgent);
+    trackEvent("store_click", {
+      store: url === GOOGLE_PLAY_URL ? "android" : "ios",
+      placement: "sticky",
+    });
     if (url === APP_STORE_URL) return;
     event.preventDefault();
     window.open(url, "_blank", "noopener,noreferrer");

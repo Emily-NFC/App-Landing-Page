@@ -3,7 +3,8 @@
 import { useCallback, useEffect, useRef } from "react";
 import confetti from "canvas-confetti";
 
-import { APP_STORE_URL, pickStoreUrl } from "@/lib/storeLinks";
+import { trackEvent } from "@/lib/analytics";
+import { APP_STORE_URL, GOOGLE_PLAY_URL, pickStoreUrl } from "@/lib/storeLinks";
 
 const CONFETTI_COLORS = ["#1d6fe5", "#22c55e", "#f59e0b", "#ef4444", "#a855f7", "#fb923c"];
 
@@ -80,6 +81,10 @@ export function CheckInBanner() {
     tryVibrate();
     if (typeof navigator === "undefined") return;
     const url = pickStoreUrl(navigator.userAgent);
+    trackEvent("store_click", {
+      store: url === GOOGLE_PLAY_URL ? "android" : "ios",
+      placement: "checkin",
+    });
     if (url === APP_STORE_URL) return;
     event.preventDefault();
     window.open(url, "_blank", "noopener,noreferrer");

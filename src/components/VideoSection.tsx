@@ -1,3 +1,7 @@
+"use client";
+
+import { trackEvent } from "@/lib/analytics";
+
 const VIDEO_ID = "AlW0mZy3m1E";
 
 export function VideoSection() {
@@ -16,7 +20,10 @@ export function VideoSection() {
           </p>
         </div>
 
-        <div className="relative mx-4 mt-3 aspect-video overflow-hidden rounded-xl bg-black">
+        <div
+          className="relative mx-4 mt-3 aspect-video overflow-hidden rounded-xl bg-black"
+          onPointerDown={() => trackEvent("video_play", { surface: "embed" })}
+        >
           <iframe
             src={`https://www.youtube.com/embed/${VIDEO_ID}?rel=0`}
             title="Fitness Court 1-minute intro"
@@ -32,6 +39,7 @@ export function VideoSection() {
             href={`https://youtu.be/${VIDEO_ID}`}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackEvent("video_play", { surface: "watch_now" })}
             className="flex w-full items-center justify-center gap-2 rounded-full bg-brand px-4 py-3 text-sm font-semibold text-white shadow-sm transition active:scale-[0.98] hover:bg-brand-dark"
           >
             <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white/20">
