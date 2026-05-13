@@ -1,12 +1,13 @@
 "use client";
 
 import { useCallback, useEffect, useRef } from "react";
+import Image from "next/image";
 import confetti from "canvas-confetti";
 
 import { trackEvent } from "@/lib/analytics";
 import { APP_STORE_URL, GOOGLE_PLAY_URL, pickStoreUrl } from "@/lib/storeLinks";
 
-const CONFETTI_COLORS = ["#1d6fe5", "#22c55e", "#f59e0b", "#ef4444", "#a855f7", "#fb923c"];
+const CONFETTI_COLORS = ["#006CA3", "#22c55e", "#f59e0b", "#ef4444", "#a855f7", "#fb923c"];
 
 function fireConfetti() {
   confetti({
@@ -72,6 +73,7 @@ export function CheckInBanner() {
   }, []);
 
   const handleCardTap = useCallback(() => {
+    trackEvent("checkin_card_tap");
     fireConfetti();
     tryVibrate();
   }, []);
@@ -104,12 +106,17 @@ export function CheckInBanner() {
               className="absolute inset-0 -m-1 rounded-full bg-orange-200/60 motion-safe:animate-ping"
               aria-hidden="true"
             />
-            <div className="relative flex h-16 w-16 items-center justify-center rounded-full bg-white shadow-sm ring-1 ring-sky-200/70">
-              <span
-                className="origin-bottom text-3xl motion-safe:animate-flame-wiggle"
-                aria-hidden="true"
-              >
-                🔥
+            <div className="relative flex h-16 w-16 items-center justify-center rounded-full bg-white shadow-sm ring-1 ring-orange-200/70">
+              <span className="relative h-10 w-10 origin-bottom motion-safe:animate-flame-wiggle">
+                <Image
+                  src="/fire.png"
+                  alt="Streak"
+                  fill
+                  sizes="160px"
+                  quality={95}
+                  className="object-contain"
+                  priority
+                />
               </span>
             </div>
             <span
@@ -121,22 +128,25 @@ export function CheckInBanner() {
               </svg>
             </span>
             <span
-              className="absolute -top-2 -right-3 inline-flex animate-badge-pop items-center gap-0.5 rounded-full bg-orange-100 px-2 py-0.5 text-[10px] font-bold text-orange-600 shadow-sm ring-1 ring-orange-200"
+              className="absolute -top-2 -right-3 inline-flex animate-badge-pop items-center gap-0.5 rounded-full bg-orange-50 px-2 py-0.5 text-[10px] font-bold text-[#f59e0b] shadow-sm ring-1 ring-[#fcd34d]"
               aria-hidden="true"
             >
               +1 day
             </span>
           </div>
           <div className="min-w-0 flex-1">
-            <h3 className="text-[20px] font-extrabold leading-tight text-slate-900">
+            <h3 className="text-[20px] font-extrabold leading-tight text-[#f19e3a]">
               You checked in!
             </h3>
+            <div className="mt-0.5 text-[13px] font-bold uppercase tracking-wide text-[#f59e0b]">
+              1 Day Streak
+            </div>
             <a
               href={APP_STORE_URL}
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleAppLink}
-              className="mt-0.5 inline-flex items-center gap-1 text-[14px] font-semibold text-brand hover:text-brand-dark"
+              className="mt-1 inline-flex items-center gap-1 text-[13px] font-semibold text-brand hover:text-brand-dark"
             >
               Save your streak in the app
               <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">

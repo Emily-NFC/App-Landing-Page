@@ -13,7 +13,7 @@ export function VideoSection() {
             Start your journey
           </div>
           <h3 className="mt-1 text-lg font-bold leading-tight tracking-tight">
-            See how the court works in 1 minute
+            See how the Fitness Court® works in 1 minute
           </h3>
           <p className="mt-1.5 text-sm leading-snug text-slate-600">
             Perfect for first-time visitors. Watch a quick, 1-min intro and see how the 7 movements work.
@@ -26,7 +26,7 @@ export function VideoSection() {
         >
           <iframe
             src={`https://www.youtube.com/embed/${VIDEO_ID}?rel=0`}
-            title="Fitness Court 1-minute intro"
+            title="Fitness Court® 1-minute intro"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen

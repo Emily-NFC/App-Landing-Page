@@ -8,7 +8,7 @@ function makeIcon(src: string, alt: string) {
   function Icon({ className = sizeClass }: IconProps) {
     return (
       <span className={`relative inline-block ${className}`}>
-        <Image src={src} alt={alt} fill sizes="40px" className="object-contain" />
+        <Image src={src} alt={alt} fill sizes="160px" quality={95} className="object-contain" />
       </span>
     );
   }

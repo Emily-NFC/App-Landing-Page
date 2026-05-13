@@ -1,6 +1,6 @@
 export function FindCourt() {
   return (
-    <section className="mx-auto max-w-md px-4 pb-24">
+    <section className="mx-auto max-w-md px-4 pb-4">
       <div className="overflow-hidden rounded-2xl bg-white shadow-[0_4px_18px_-6px_rgba(0,0,0,0.08)]">
         <a
           href="https://www.nationalfitnesscampaign.com/map"
@@ -9,9 +9,9 @@ export function FindCourt() {
           className="flex items-center gap-3 p-4 transition active:bg-slate-50"
         >
           <div className="flex-1">
-            <h3 className="text-base font-bold leading-tight">Find another court near you</h3>
+            <h3 className="text-base font-bold leading-tight">Find another Fitness Court® near you</h3>
             <p className="mt-1 text-[12px] leading-snug text-slate-500">
-              Explore nearby Fitness Court locations.
+              Explore nearby Fitness Court® locations.
             </p>
           </div>
           <div className="relative h-16 w-24 shrink-0 overflow-hidden rounded-lg bg-slate-100">
@@ -24,7 +24,7 @@ export function FindCourt() {
             </svg>
             <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
               <svg viewBox="0 0 32 32" className="h-7 w-7" fill="none" aria-hidden="true">
-                <path d="M16 2C9.92 2 5 6.92 5 13c0 7.5 11 17 11 17s11-9.5 11-17c0-6.08-4.92-11-11-11z" fill="#1d6fe5" />
+                <path d="M16 2C9.92 2 5 6.92 5 13c0 7.5 11 17 11 17s11-9.5 11-17c0-6.08-4.92-11-11-11z" fill="#006CA3" />
                 <circle cx="16" cy="13" r="4" fill="white" />
               </svg>
             </span>

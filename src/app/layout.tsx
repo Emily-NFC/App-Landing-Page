@@ -12,11 +12,11 @@ const geistSans = Geist({
 export const metadata: Metadata = {
   title: "The Fitness Court® — Take it with you",
   description:
-    "Download the free Fitness Court app for guided workouts, check-ins, badges, and challenges.",
+    "Download the free Fitness Court® App for guided workouts, check-ins, badges, and challenges.",
 };
 
 export const viewport: Viewport = {
-  themeColor: "#1d6fe5",
+  themeColor: "#006CA3",
   width: "device-width",
   initialScale: 1,
 };

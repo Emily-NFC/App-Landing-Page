@@ -28,8 +28,8 @@ export function FeaturesRow() {
         <div className="grid grid-cols-3 gap-3 text-center">
           {items.map(({ src, alt, title, body }) => (
             <div key={title} className="flex flex-col items-center gap-2">
-              <span className="relative inline-block h-8 w-8">
-                <Image src={src} alt={alt} fill sizes="32px" className="object-contain" />
+              <span className="relative inline-block h-10 w-10">
+                <Image src={src} alt={alt} fill sizes="160px" quality={95} className="object-contain" />
               </span>
               <div className="text-[13px] font-semibold leading-tight">{title}</div>
               <p className="text-[11px] leading-snug text-slate-500">{body}</p>

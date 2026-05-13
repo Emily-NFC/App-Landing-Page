@@ -2,9 +2,9 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #0f172a;
-  --brand: #1d6fe5;
-  --brand-dark: #0b4ea8;
+  --foreground: #334155;
+  --brand: #006CA3;
+  --brand-dark: #005482;
   --muted: #6b7280;
   --card: #ffffff;
   --card-border: #e5e7eb;
@@ -58,7 +58,7 @@
 }
 
 body {
-  background: #f5f7fb;
+  background: #ffffff;
   color: var(--foreground);
   font-family: var(--font-geist-sans), system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }

@@ -1,3 +1,4 @@
+import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { CheckInBanner } from "@/components/CheckInBanner";
 import { FeaturesRow } from "@/components/FeaturesRow";
@@ -9,7 +10,9 @@ import { StickyBanner } from "@/components/StickyBanner";
 export default function Page() {
   return (
     <>
-      <main className="flex-1 pt-20">
+      <StickyBanner />
+      <Header />
+      <main className="flex-1">
         <Hero />
         <CheckInBanner />
         <FeaturesRow />
@@ -17,7 +20,6 @@ export default function Page() {
         <VideoSection />
         <FindCourt />
       </main>
-      <StickyBanner />
     </>
   );
 }
