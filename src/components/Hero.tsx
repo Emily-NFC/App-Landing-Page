@@ -19,12 +19,10 @@ export function Hero() {
 
         <div className="absolute inset-0 px-5 pt-5 sm:pt-9">
           <div className="mx-auto w-full max-w-md">
-            <h1 className="max-w-[58%] text-[26px] font-extrabold leading-[1.04] tracking-tight text-slate-900 sm:text-[34px]">
-              Take the
+            <h1 className="max-w-[58%] text-[30px] font-extrabold leading-[1.04] tracking-tight text-slate-900 sm:text-[38px]">
+              Save your
               <br />
-              Fitness Court
-              <br />
-              with you
+              streak
             </h1>
             <p className="mt-2.5 max-w-[55%] text-[12px] leading-snug text-slate-700 sm:text-[14px]">
               Download the free app for guided workouts, check-ins, badges, and challenges.

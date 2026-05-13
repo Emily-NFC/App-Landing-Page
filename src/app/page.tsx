@@ -1,4 +1,5 @@
 import { Hero } from "@/components/Hero";
+import { CheckInBanner } from "@/components/CheckInBanner";
 import { FeaturesRow } from "@/components/FeaturesRow";
 import { MovementsRow } from "@/components/MovementsRow";
 import { VideoSection } from "@/components/VideoSection";
@@ -10,6 +11,7 @@ export default function Page() {
     <>
       <main className="flex-1 pt-20">
         <Hero />
+        <CheckInBanner />
         <FeaturesRow />
         <MovementsRow />
         <VideoSection />
