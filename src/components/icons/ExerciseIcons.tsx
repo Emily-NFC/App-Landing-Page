@@ -16,20 +16,20 @@ function makeIcon(src: string, alt: string) {
   return Icon;
 }
 
+export const CoreIcon = makeIcon("/core.png", "Core");
 export const SquatIcon = makeIcon("/squat.png", "Squat");
 export const PushIcon = makeIcon("/push.png", "Push");
 export const LungeIcon = makeIcon("/lunge.png", "Lunge");
 export const PullIcon = makeIcon("/pull.png", "Pull");
 export const AgilityIcon = makeIcon("/agility.png", "Agility");
 export const BendIcon = makeIcon("/bend.png", "Bend");
-export const PlankIcon = makeIcon("/core.png", "Plank");
 
 export const movements = [
+  { name: "CORE", Icon: CoreIcon },
   { name: "SQUAT", Icon: SquatIcon },
   { name: "PUSH", Icon: PushIcon },
   { name: "LUNGE", Icon: LungeIcon },
   { name: "PULL", Icon: PullIcon },
   { name: "AGILITY", Icon: AgilityIcon },
   { name: "BEND", Icon: BendIcon },
-  { name: "PLANK", Icon: PlankIcon },
 ] as const;
