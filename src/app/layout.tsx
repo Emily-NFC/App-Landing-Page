@@ -2,7 +2,12 @@ import type { Metadata, Viewport } from "next";
 import { Geist } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { GoogleAnalytics } from "@next/third-parties/google";
+import { ClarityInit } from "@/components/ClarityInit";
 import "./globals.css";
+
+const GA_MEASUREMENT_ID = "G-X9QNG5F5QM";
+const CLARITY_PROJECT_ID = "wr6zqq1hv1";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,6 +38,12 @@ export default function RootLayout({
         <Analytics />
         <SpeedInsights />
       </body>
+      {process.env.NODE_ENV === "production" && (
+        <>
+          <GoogleAnalytics gaId={GA_MEASUREMENT_ID} />
+          <ClarityInit projectId={CLARITY_PROJECT_ID} />
+        </>
+      )}
     </html>
   );
 }
