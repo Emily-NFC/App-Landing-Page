@@ -2,7 +2,7 @@
 
 import { trackEvent } from "@/lib/analytics";
 
-const VIDEO_ID = "AlW0mZy3m1E";
+const VIDEO_ID = "gWCQpK6KPuM";
 
 export function VideoSection() {
   return (
