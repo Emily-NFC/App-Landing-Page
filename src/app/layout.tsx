@@ -6,7 +6,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import { ClarityInit } from "@/components/ClarityInit";
 import "./globals.css";
 
-const GA_MEASUREMENT_ID = "G-X9QNG5F5QM";
+const GA_MEASUREMENT_ID = "G-QFLW6NHLTC";
 const CLARITY_PROJECT_ID = "wr6zqq1hv1";
 
 const geistSans = Geist({
