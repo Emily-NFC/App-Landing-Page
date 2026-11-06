@@ -1,12 +1,16 @@
 import Image from "next/image";
+import { Header } from "../Header";
 import { AppStoreBadge, GooglePlayBadge } from "../icons/StoreBadges";
 
-// Same frame as the V2 hero: phone width, below the logo, words over the sky.
+// The V2 frame (phone width), with the photo running up behind the banner and logo.
 export function HeroV4() {
   return (
     <section className="relative">
-      <div className="relative mx-auto w-full max-w-md overflow-hidden">
-        <div className="relative aspect-[4/5] w-full">
+      <div className="relative mx-auto w-full max-w-md overflow-hidden bg-gradient-to-b from-[#f3f8fc] to-[#d9ebf8] pt-[140px]">
+        <div
+          className="relative aspect-[4/5] w-full"
+          style={{ maskImage: "linear-gradient(to bottom, transparent, black 18%)", WebkitMaskImage: "linear-gradient(to bottom, transparent, black 18%)" }}
+        >
           <Image
             src="/v2/hero.jpg"
             alt="Coaches Avery and Miles waving at a Fitness Court®"
@@ -16,12 +20,16 @@ export function HeroV4() {
             className="object-cover object-[50%_70%]"
           />
           <div
-            className="absolute inset-x-0 top-0 h-[55%] bg-gradient-to-b from-white/90 via-white/70 to-transparent"
+            className="absolute inset-x-0 top-0 h-[55%] bg-gradient-to-b from-white/70 via-white/55 to-transparent"
             aria-hidden="true"
           />
         </div>
 
-        <div className="absolute inset-x-0 top-0 px-5 pt-5">
+        <div className="absolute inset-x-0 top-[84px]">
+          <Header />
+        </div>
+
+        <div className="absolute inset-x-0 top-[140px] px-5 pt-5">
           <span className="inline-flex items-center rounded-full bg-brand px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.12em] text-white">
             New Fitness Court® App
           </span>
