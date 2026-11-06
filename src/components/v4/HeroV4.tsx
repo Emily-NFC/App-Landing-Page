@@ -6,13 +6,13 @@ export function HeroV4() {
   return (
     <section className="relative">
       {/* One full phone screen, top to bottom: banner and logo float over the sky. */}
-      <div className="relative h-[100svh] max-h-[960px] min-h-[600px] w-full overflow-hidden">
+      <div className="relative mx-auto h-[100svh] max-h-[900px] min-h-[600px] w-full max-w-md overflow-hidden">
         <Image
           src="/v2/hero.jpg"
           alt="Coaches Avery and Miles waving at a Fitness Court®"
           fill
           priority
-          sizes="100vw"
+          sizes="(max-width: 448px) 100vw, 448px"
           className="object-cover object-[9%_100%]"
         />
         <div
