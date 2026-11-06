@@ -1,10 +1,7 @@
 import type { Metadata } from "next";
-import { Header } from "@/components/Header";
 import { StickyBannerV4 } from "@/components/v4/StickyBannerV4";
 import { HeroV4 } from "@/components/v4/HeroV4";
 import { CheckInCard } from "@/components/v4/CheckInCard";
-import { TourCard } from "@/components/v4/TourCard";
-import { WorkoutsCard } from "@/components/v4/WorkoutsCard";
 import { CoachesCard } from "@/components/v4/CoachesCard";
 import { MoreWays } from "@/components/v4/MoreWays";
 import { BadgesCardV4 } from "@/components/v4/BadgesCardV4";
@@ -20,13 +17,10 @@ export default function PageV4() {
   return (
     <>
       <StickyBannerV4 />
-      <Header />
       <main className="flex-1">
         <HeroV4 />
-        <CheckInCard />
-        <TourCard />
-        <WorkoutsCard />
         <CoachesCard />
+        <CheckInCard />
         <MoreWays />
         <BadgesCardV4 />
         <FinalCtaV4 />

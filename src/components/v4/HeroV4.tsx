@@ -1,38 +1,45 @@
 import Image from "next/image";
+import { Header } from "../Header";
 import { AppStoreBadge, GooglePlayBadge } from "../icons/StoreBadges";
 
 export function HeroV4() {
   return (
     <section className="relative">
-      <div className="relative mx-auto w-full max-w-md overflow-hidden">
-        {/* Coaches on the left, headline over the sky on the right. */}
-        <div className="relative aspect-[5/4] w-full">
+      <div className="relative w-full overflow-hidden">
+        {/* Full bleed from the top of the screen: the banner and the logo float over the sky. */}
+        <div className="relative aspect-[4/5] max-h-[620px] w-full sm:aspect-[16/9]">
           <Image
             src="/v2/hero.jpg"
             alt="Coaches Avery and Miles waving at a Fitness Court®"
             fill
             priority
             sizes="(max-width: 448px) 100vw, 448px"
-            className="object-cover object-[30%_45%]"
+            className="object-cover object-[30%_70%]"
           />
           <div
-            className="absolute right-0 top-0 h-[62%] w-[80%] bg-[radial-gradient(ellipse_at_top_right,rgba(255,255,255,0.92)_0%,rgba(255,255,255,0.6)_45%,transparent_75%)]"
+            className="absolute right-0 top-0 h-[70%] w-[85%] bg-[radial-gradient(ellipse_at_top_right,rgba(255,255,255,0.92)_0%,rgba(255,255,255,0.6)_45%,transparent_75%)]"
             aria-hidden="true"
           />
         </div>
 
-        <span className="absolute left-4 top-3 rounded-full bg-brand px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.1em] text-white shadow-sm">
+        <div className="absolute inset-x-0 top-[84px]">
+          <Header />
+        </div>
+
+        <div className="absolute inset-x-0 top-[146px] mx-auto max-w-md">
+        <span className="absolute left-4 top-0 rounded-full bg-brand px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.1em] text-white shadow-sm">
           New Fitness Court® App
         </span>
-        <div className="absolute right-4 top-[15%] w-[60%] text-right">
+        <div className="absolute right-4 top-9 w-[64%] text-right">
           <h1 className="text-[34px] font-black leading-[0.98] tracking-tight text-slate-900">
             You&apos;re here.
             <br />
             <span className="text-brand">Let&apos;s move.</span>
           </h1>
-          <p className="mt-2 text-[12.5px] font-semibold leading-snug text-slate-800">
+          <p className="mt-2 inline-block rounded-full bg-white/90 px-2.5 py-1 text-[12px] font-bold leading-snug text-slate-800 shadow-sm">
             Pick your coach. Start in 7 minutes.
           </p>
+        </div>
         </div>
       </div>
 
