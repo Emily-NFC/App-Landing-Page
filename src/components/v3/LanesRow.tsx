@@ -22,7 +22,7 @@ export function LanesRow() {
       <h2 className="text-[26px] font-black leading-tight tracking-tight text-slate-900">
         Pick a lane. <span className="text-brand">Press play.</span>
       </h2>
-      <p className="mt-1 text-[13px] font-medium text-slate-600">Your coach talks you through every move.</p>
+      <p className="mt-1 text-[13px] font-medium text-slate-600">Your coach talks you through every move. 7 to 30 minutes.</p>
       <div className="mt-3 grid grid-cols-2 gap-3">
         {lanes.map(({ title, line, src, alt }) => (
           <a
