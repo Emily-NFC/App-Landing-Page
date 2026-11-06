@@ -9,7 +9,7 @@ import { APP_STORE_URL, GOOGLE_PLAY_URL, pickStoreUrl } from "@/lib/storeLinks";
 
 const CONFETTI_COLORS = ["#006CA3", "#22c55e", "#f59e0b", "#ef4444", "#a855f7", "#fb923c"];
 
-function fireConfetti() {
+export function fireConfetti() {
   confetti({
     particleCount: 80,
     spread: 70,
@@ -39,7 +39,7 @@ function fireConfetti() {
   });
 }
 
-function tryVibrate() {
+export function tryVibrate() {
   if (typeof navigator === "undefined" || !("vibrate" in navigator)) return false;
   try {
     return navigator.vibrate([60, 40, 90, 40, 140]);
