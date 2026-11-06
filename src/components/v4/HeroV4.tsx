@@ -8,7 +8,7 @@ export function HeroV4() {
     <section className="relative">
       <div className="relative mx-auto w-full max-w-md overflow-hidden bg-gradient-to-b from-[#f3f8fc] to-[#d9ebf8] pt-[140px]">
         <div
-          className="relative aspect-[4/5] w-full"
+          className="relative aspect-[1/1] w-full"
           style={{ maskImage: "linear-gradient(to bottom, transparent, black 18%)", WebkitMaskImage: "linear-gradient(to bottom, transparent, black 18%)" }}
         >
           <Image
@@ -17,7 +17,7 @@ export function HeroV4() {
             fill
             priority
             sizes="(max-width: 448px) 100vw, 448px"
-            className="object-cover object-[50%_70%]"
+            className="object-cover object-[35%_80%]"
           />
           <div
             className="absolute inset-x-0 top-0 h-[55%] bg-gradient-to-b from-white/70 via-white/55 to-transparent"
@@ -29,7 +29,7 @@ export function HeroV4() {
           <Header />
         </div>
 
-        <div className="absolute inset-x-0 top-[140px] px-5 pt-5">
+        <div className="absolute inset-x-0 top-[140px] px-5 pt-3 text-right">
           <span className="inline-flex items-center rounded-full bg-brand px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.12em] text-white">
             New Fitness Court® App
           </span>
