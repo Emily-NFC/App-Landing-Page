@@ -13,9 +13,9 @@ export function WorkoutsRow() {
   return (
     <section id="workouts" className="mx-auto max-w-md pb-4">
       <div className="px-4">
-        <div className="text-[10px] font-bold uppercase tracking-[0.14em] text-brand">Workouts for every level</div>
+        <div className="text-[10px] font-bold uppercase tracking-[0.14em] text-brand">Guided workouts</div>
         <h2 className="mt-1 text-lg font-bold leading-tight tracking-tight text-slate-800">
-          Strength or cardio. 7 minutes or 30.
+          Press play. Your coach does the rest.
         </h2>
         <div className="mt-2 flex gap-1.5">
           {lengths.map((m) => (

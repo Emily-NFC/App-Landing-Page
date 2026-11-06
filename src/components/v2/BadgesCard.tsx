@@ -13,9 +13,9 @@ export function BadgesCard() {
       <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#0b3a5c] to-brand p-4 text-white shadow-[0_8px_24px_-12px_rgba(0,108,163,0.5)]">
         <div className="max-w-[62%]">
           <div className="text-[10px] font-bold uppercase tracking-[0.14em] text-white/75">Badges &amp; challenges</div>
-          <h2 className="mt-1 text-lg font-bold leading-tight tracking-tight">Earn badges. Build streaks. Beat your best.</h2>
+          <h2 className="mt-1 text-lg font-bold leading-tight tracking-tight">Check in. Earn badges. Keep the streak.</h2>
           <p className="mt-1.5 text-[12px] leading-snug text-white/85">
-            Check in automatically, keep your weekly streak alive, and take the Fitness Challenge to see how you stack up.
+            Every visit counts automatically. Take the Fitness Challenge to see how you stack up.
           </p>
         </div>
         <div className="absolute -right-2 bottom-0 h-[92%] w-[42%]">

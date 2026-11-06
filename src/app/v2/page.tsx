@@ -25,21 +25,21 @@ export default function PageV2() {
       <main className="flex-1">
         <HeroV2 />
         <CheckInBanner />
-        <CoachesRow />
         <WorkoutsRow />
+        <CoachesRow />
         <FeatureCard
           id="walks"
-          eyebrow="New · Companion Walks"
-          title="Walks with a coach (and a dog)."
-          body="Put in your earbuds and walk with Miles and Max, or any coach. They set the pace, count your steps, and keep you company the whole way."
+          eyebrow="Companion Walks"
+          title="Walk with a coach. Bring the dog."
+          body="Earbuds in. Your coach sets the pace and counts the steps."
           image="/v2/walk-dog.jpg"
           imageAlt="Coach Miles walking his dog Max on a park path"
         />
         <FeatureCard
           id="explore"
-          eyebrow="New · Explore"
-          title="Find your next court or trail."
-          body="See every Fitness Court® near you, follow Trail Line routes in select cities, and record your walks and runs with live distance and weather."
+          eyebrow="Explore"
+          title="Find a court. Hit a trail."
+          body="Every Fitness Court® near you, plus Trail Line routes in select cities."
           image="/v2/explore-trail.jpg"
           imageAlt="A Trail Line route through a park"
         />
