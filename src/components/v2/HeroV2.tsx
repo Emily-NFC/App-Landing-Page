@@ -1,8 +1,6 @@
 import Image from "next/image";
 import { AppStoreBadge, GooglePlayBadge } from "../icons/StoreBadges";
 
-const chips = ["Free", "7-min workouts", "4 coaches"];
-
 export function HeroV2() {
   return (
     <section className="relative">
@@ -15,36 +13,28 @@ export function HeroV2() {
             fill
             priority
             sizes="(max-width: 448px) 100vw, 448px"
-            className="object-cover object-[50%_80%]"
+            className="object-cover object-[50%_70%]"
           />
           <div
-            className="absolute inset-x-0 top-0 h-[60%] bg-gradient-to-b from-white via-white/80 to-transparent"
+            className="absolute inset-x-0 top-0 h-[55%] bg-gradient-to-b from-white/90 via-white/70 to-transparent"
             aria-hidden="true"
           />
         </div>
 
-        <div className="absolute inset-x-0 top-0 px-5 pt-4">
-          <div className="flex items-center gap-2 text-[20px] font-extrabold tracking-tight text-brand">
-            <span className="inline-block origin-bottom-right motion-safe:animate-flame-wiggle" aria-hidden="true">
-              👋
-            </span>
-            Welcome to the
-          </div>
-          <h1 className="relative mt-1 text-[44px] font-black leading-[0.95] tracking-tight text-slate-900">
-            <span className="absolute -top-3 right-2 rotate-[8deg] rounded-full bg-orange-400 px-3 py-1 text-[14px] font-black uppercase tracking-wide text-white shadow-md motion-safe:animate-badge-pop">
-              New!
-            </span>
-            Fitness Court®
+        <div className="absolute inset-x-0 top-0 px-5 pt-5">
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-brand px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.12em] text-white">
+            New app
+          </span>
+          <h1 className="mt-2 text-[30px] font-extrabold leading-[1.02] tracking-tight text-slate-900">
+            Guided workouts.
             <br />
-            App
+            Choose your coach.
+            <br />
+            <span className="text-brand">Check in.</span>
           </h1>
-          <div className="mt-3 flex flex-wrap gap-1.5">
-            {chips.map((c) => (
-              <span key={c} className="rounded-full bg-white px-3 py-1 text-[12px] font-bold text-slate-800 shadow-sm ring-1 ring-slate-200">
-                {c}
-              </span>
-            ))}
-          </div>
+          <p className="mt-2 text-[13px] font-semibold leading-snug text-slate-700">
+            Free in the Fitness Court® App. Join 130,000+ members.
+          </p>
         </div>
       </div>
 
@@ -54,7 +44,7 @@ export function HeroV2() {
             <AppStoreBadge />
             <GooglePlayBadge />
           </div>
-          <p className="mt-2 text-center text-[11px] text-slate-500">Join 130,000+ members · English &amp; Español</p>
+          <p className="mt-2 text-center text-[11px] text-slate-500">Free · English &amp; Español</p>
         </div>
       </div>
     </section>

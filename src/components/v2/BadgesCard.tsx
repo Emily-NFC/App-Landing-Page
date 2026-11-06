@@ -15,7 +15,7 @@ export function BadgesCard() {
           <div className="text-[10px] font-bold uppercase tracking-[0.14em] text-white/75">Badges &amp; challenges</div>
           <h2 className="mt-1 text-lg font-bold leading-tight tracking-tight">Check in. Earn badges. Keep the streak.</h2>
           <p className="mt-1.5 text-[12px] leading-snug text-white/85">
-            Every visit counts. Take the Fitness Challenge.
+            Every visit counts automatically. Take the Fitness Challenge to see how you stack up.
           </p>
         </div>
         <div className="absolute -right-2 bottom-0 h-[92%] w-[42%]">
