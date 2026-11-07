@@ -23,7 +23,7 @@ export function CoachesCard() {
   return (
     <section id="coaches" className="mx-auto max-w-md px-4 pb-3">
       <div className="rounded-2xl bg-white p-4 shadow-[0_4px_18px_-6px_rgba(0,0,0,0.08)]">
-        <div className="text-[10px] font-bold uppercase tracking-[0.14em] text-brand">Now with guided coaches</div>
+        <div className="text-[10px] font-bold uppercase tracking-[0.14em] text-brand">Guided coaches</div>
         <h2 className="mt-1 text-[24px] font-black leading-tight tracking-tight text-slate-900">Pick your coach.</h2>
         <p className="mt-0.5 text-[13px] text-slate-600">They talk you through every move.</p>
 

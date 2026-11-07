@@ -11,7 +11,7 @@ export function BadgesCardV4() {
           <p className="mt-1.5 text-[12px] leading-snug text-white/85">Check in, build your streak, and take on challenges.</p>
         </div>
         <div className="absolute -right-2 bottom-0 h-[88%] w-[40%]">
-          <Image src="/v2/medal.png" alt="Coach Miles holding a medal" fill sizes="180px" className="object-contain object-bottom" />
+          <Image src="/v4/miles-badge.png" alt="Coach Miles holding a badge" fill sizes="180px" className="object-contain object-bottom" />
         </div>
         <div className="relative mt-3 flex max-w-[66%] gap-0.5">
           <AppBadge family="fitnessCourt" big="10" small="VISITS" label="10 visits badge" className="h-14 w-14 shrink-0" />

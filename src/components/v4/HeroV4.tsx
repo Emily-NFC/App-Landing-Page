@@ -1,12 +1,12 @@
 import Image from "next/image";
 import { Header } from "../Header";
-import { AppStoreBadge, GooglePlayBadge } from "../icons/StoreBadges";
+import { StoreLink } from "./StoreLink";
 
 // The V2 frame (phone width), with the photo running up behind the banner and logo.
 export function HeroV4() {
   return (
-    <section className="relative">
-      <div className="relative mx-auto w-full max-w-md overflow-hidden bg-gradient-to-b from-[#f3f8fc] to-[#d9ebf8] pt-[104px]">
+    <section className="relative pb-3">
+      <div className="relative mx-auto w-full max-w-md overflow-hidden bg-gradient-to-b from-[#f3f8fc] to-[#d9ebf8] pt-[150px]">
         <div
           className="relative aspect-[1/1] w-full"
           style={{ maskImage: "linear-gradient(to bottom, transparent, black 18%)", WebkitMaskImage: "linear-gradient(to bottom, transparent, black 18%)" }}
@@ -30,10 +30,7 @@ export function HeroV4() {
         </div>
 
         <div className="absolute inset-x-0 top-[128px] px-5 text-right">
-          <span className="inline-flex items-center rounded-full bg-brand px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.12em] text-white">
-            New Fitness Court® App
-          </span>
-          <h1 className="mt-1.5 text-[38px] font-black leading-[0.95] tracking-tight text-slate-900">
+          <h1 className="text-[38px] font-black leading-[0.95] tracking-tight text-slate-900">
             You&apos;re here.
             <br />
             <span className="text-brand">Let&apos;s move.</span>
@@ -41,18 +38,21 @@ export function HeroV4() {
           <p className="mt-1.5 text-[14px] font-semibold leading-snug text-slate-800">
             Pick your coach. Start in 7 minutes.
           </p>
+          <div id="get-app" className="scroll-mt-28">
+            <StoreLink
+              placement="hero"
+              className="mt-3 inline-flex items-center gap-2 rounded-full bg-brand px-6 py-3.5 text-[17px] font-extrabold text-white shadow-[0_10px_24px_-8px_rgba(0,108,163,0.7)] transition active:scale-[0.97]"
+            >
+              <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M12 3v12M7 10l5 5 5-5M5 21h14" />
+              </svg>
+              Download the app
+            </StoreLink>
+            <p className="mt-1.5 inline-block rounded-full bg-white/90 px-2.5 py-0.5 text-[11px] font-semibold text-slate-700 shadow-sm">Free · iPhone &amp; Android</p>
+          </div>
         </div>
       </div>
 
-      <div id="get-app" className="mx-auto -mt-8 max-w-md scroll-mt-28 px-4 pb-4">
-        <div className="relative rounded-2xl bg-white p-3 shadow-[0_8px_24px_-10px_rgba(0,0,0,0.2)]">
-          <div className="grid grid-cols-2 gap-2.5">
-            <AppStoreBadge />
-            <GooglePlayBadge />
-          </div>
-          <p className="mt-2 text-center text-[11px] text-slate-500">Free · English &amp; Español</p>
-        </div>
-      </div>
     </section>
   );
 }

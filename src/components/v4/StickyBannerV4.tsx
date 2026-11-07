@@ -18,7 +18,7 @@ export function StickyBannerV4() {
           placement="sticky"
           className="shrink-0 rounded-full bg-white px-3.5 py-2 text-[12px] font-bold text-brand shadow-sm transition active:scale-[0.98]"
         >
-          Get the App
+          Download
         </StoreLink>
       </div>
     </div>
