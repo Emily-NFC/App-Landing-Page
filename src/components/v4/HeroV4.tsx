@@ -29,25 +29,24 @@ export function HeroV4() {
           <Header />
         </div>
 
-        <div className="absolute inset-x-0 top-[132px] px-5 text-right">
-          <h1 className="text-[38px] font-black leading-[0.95] tracking-tight text-slate-900">
-            You&apos;re here.
-            <br />
-            <span className="text-brand">Let&apos;s move.</span>
+        <div className="absolute inset-x-0 top-[154px] px-5 text-center">
+          <h1 className="whitespace-nowrap text-[clamp(24px,7.9vw,34px)] font-black leading-none tracking-tight text-slate-900">
+            You&apos;re here. <span className="text-brand">Let&apos;s move.</span>
           </h1>
-          <p className="mt-1.5 text-[14px] font-semibold leading-snug text-slate-800">
-            Pick your coach. Start in 7 minutes.
-          </p>
+          <p className="mt-2 text-[20px] font-bold leading-tight text-slate-800">Pick your coach.</p>
           <div id="get-app" className="mt-3 scroll-mt-28">
-            <StoreLink
-              placement="hero"
-              className="inline-flex items-center gap-2 rounded-full bg-brand px-5 py-3 text-[16px] font-extrabold text-white shadow-[0_8px_20px_-6px_rgba(0,108,163,0.7)] transition active:scale-[0.97]"
-            >
-              <svg viewBox="0 0 24 24" className="h-[18px] w-[18px]" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <path d="M12 3v12M7 10l5 5 5-5M5 21h14" />
-              </svg>
-              Download the app
-            </StoreLink>
+            <span className="relative inline-flex">
+              <span className="absolute inset-0 rounded-full bg-brand/50 motion-safe:animate-ping [animation-duration:1.8s]" aria-hidden="true" />
+              <StoreLink
+                placement="hero"
+                className="relative inline-flex items-center gap-2.5 rounded-full bg-brand px-7 py-3.5 text-[18px] font-extrabold text-white shadow-[0_10px_24px_-8px_rgba(0,108,163,0.7)] transition active:scale-[0.97] motion-safe:animate-cta-pulse"
+              >
+                <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M12 3v12M7 10l5 5 5-5M5 21h14" />
+                </svg>
+                Download the app
+              </StoreLink>
+            </span>
           </div>
         </div>
 
