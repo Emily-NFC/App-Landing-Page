@@ -25,20 +25,20 @@ export function HeroV4() {
         </div>
 
 
-        <div className="absolute inset-x-0 top-[100px] px-5 text-center sm:top-[80px]">
+        <div className="absolute inset-x-0 top-[104px] px-5 text-center">
           <h1 className="whitespace-nowrap text-[clamp(24px,7.9vw,34px)] font-black leading-none tracking-tight text-slate-900">
             You&apos;re here. <span className="text-brand">Let&apos;s move.</span>
           </h1>
           <p className="mt-2 whitespace-nowrap text-[clamp(13px,4.1vw,17px)] font-bold leading-snug text-slate-800">
             Pick your coach. Start your fitness journey.
           </p>
-          <div id="get-app" className="mt-5 scroll-mt-28">
+          <div id="get-app" className="mt-3 scroll-mt-28">
             <span className="relative inline-flex">
               <StoreLink
                 placement="hero"
-                className="relative inline-flex items-center gap-1.5 rounded-full bg-brand px-3.5 py-1.5 text-[13px] font-bold text-white shadow-[0_10px_24px_-8px_rgba(0,108,163,0.7)] transition active:scale-[0.97] motion-safe:animate-cta-pulse"
+                className="relative inline-flex items-center gap-1.5 rounded-full bg-brand px-4 py-2 text-[14px] font-bold text-white shadow-[0_10px_24px_-8px_rgba(0,108,163,0.7)] transition active:scale-[0.97] motion-safe:animate-cta-pulse"
               >
-                <svg viewBox="0 0 24 24" className="h-3 w-3" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <path d="M12 3v12M7 10l5 5 5-5M5 21h14" />
                 </svg>
                 Download the app
