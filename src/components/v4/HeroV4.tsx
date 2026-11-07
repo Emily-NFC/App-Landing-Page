@@ -36,7 +36,6 @@ export function HeroV4() {
           <p className="mt-2 text-[20px] font-bold leading-tight text-slate-800">Pick your coach.</p>
           <div id="get-app" className="mt-3 scroll-mt-28">
             <span className="relative inline-flex">
-              <span className="absolute inset-0 rounded-full bg-brand/50 motion-safe:animate-ping [animation-duration:1.8s]" aria-hidden="true" />
               <StoreLink
                 placement="hero"
                 className="relative inline-flex items-center gap-2.5 rounded-full bg-brand px-7 py-3.5 text-[18px] font-extrabold text-white shadow-[0_10px_24px_-8px_rgba(0,108,163,0.7)] transition active:scale-[0.97] motion-safe:animate-cta-pulse"
