@@ -5,7 +5,7 @@ import { StoreLink } from "./StoreLink";
 export function HeroV4() {
   return (
     <section className="relative pb-3">
-      <div className="relative mx-auto w-full max-w-md overflow-hidden bg-gradient-to-b from-[#f4f8fc] via-[#e3eff9] to-[#cfe5f6] pt-[150px]">
+      <div className="relative mx-auto w-full max-w-md overflow-hidden bg-gradient-to-b from-[#f4f8fc] via-[#e3eff9] to-[#cfe5f6] pt-[112px] sm:pt-[64px]">
         {/* The whole photo, uncropped, faded into the sky above it. */}
         <div
           className="relative aspect-[1290/1209] w-full"
