@@ -1,12 +1,11 @@
 import Image from "next/image";
-import { Header } from "../Header";
 import { StoreLink } from "./StoreLink";
 
 // Phone-width frame; the photo runs up behind the banner and logo.
 export function HeroV4() {
   return (
     <section className="relative pb-3">
-      <div className="relative mx-auto w-full max-w-md overflow-hidden bg-gradient-to-b from-[#f4f8fc] via-[#e3eff9] to-[#cfe5f6] pt-[196px]">
+      <div className="relative mx-auto w-full max-w-md overflow-hidden bg-gradient-to-b from-[#f4f8fc] via-[#e3eff9] to-[#cfe5f6] pt-[150px]">
         {/* The whole photo, uncropped, faded into the sky above it. */}
         <div
           className="relative aspect-[1290/1209] w-full"
@@ -25,18 +24,13 @@ export function HeroV4() {
           />
         </div>
 
-        <div className="absolute inset-x-0 top-[84px]">
-          <Header />
-        </div>
 
-        <div className="absolute inset-x-0 top-[154px] px-5 text-center">
+        <div className="absolute inset-x-0 top-[104px] px-5 text-center">
           <h1 className="whitespace-nowrap text-[clamp(24px,7.9vw,34px)] font-black leading-none tracking-tight text-slate-900">
             You&apos;re here. <span className="text-brand">Let&apos;s move.</span>
           </h1>
-          <p className="mt-2 text-[18px] font-bold leading-snug text-slate-800">
-            Pick your coach.
-            <br />
-            Start your fitness journey.
+          <p className="mt-2 whitespace-nowrap text-[clamp(13px,4.1vw,17px)] font-bold leading-snug text-slate-800">
+            Pick your coach. Start your fitness journey.
           </p>
           <div id="get-app" className="mt-3 scroll-mt-28">
             <span className="relative inline-flex">
