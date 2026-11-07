@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { trackEvent } from "@/lib/analytics";
 import { StoreLink } from "./StoreLink";
@@ -19,15 +19,35 @@ export function CoachesCard() {
   const [picked, setPicked] = useState(coaches[0]);
   // 0 typing, 1 coach message, 2 member reply. Replays for each coach.
   const [step, setStep] = useState(0);
+  // The chat waits until the preview is on screen.
+  const previewRef = useRef<HTMLDivElement>(null);
+  const [seen, setSeen] = useState(false);
 
   useEffect(() => {
+    const el = previewRef.current;
+    if (!el) return;
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setSeen(true);
+          io.disconnect();
+        }
+      },
+      { threshold: 0.5 },
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!seen) return;
     const a = window.setTimeout(() => setStep(1), 900);
     const b = window.setTimeout(() => setStep(2), 2600);
     return () => {
       window.clearTimeout(a);
       window.clearTimeout(b);
     };
-  }, [picked.id]);
+  }, [picked.id, seen]);
 
   function pick(coach: (typeof coaches)[number]) {
     setPicked(coach);
@@ -70,6 +90,7 @@ export function CoachesCard() {
           })}
         </div>
 
+        <div ref={previewRef}>
         <StoreLink
           placement={`coach_${picked.id}`}
           className="relative mt-3 block aspect-[4/5] overflow-hidden rounded-2xl bg-sky-200 transition active:scale-[0.99]"
@@ -134,6 +155,7 @@ export function CoachesCard() {
             </div>
           </div>
         </StoreLink>
+        </div>
       </div>
     </section>
   );

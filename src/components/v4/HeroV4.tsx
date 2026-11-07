@@ -41,17 +41,21 @@ export function HeroV4() {
           <div id="get-app" className="mt-3 scroll-mt-28">
             <StoreLink
               placement="hero"
-              className="inline-flex items-center gap-2 rounded-full bg-brand px-5 py-2.5 text-[15px] font-bold text-white shadow-[0_6px_16px_-6px_rgba(0,0,0,0.4)] ring-2 ring-white transition active:scale-[0.97]"
+              className="inline-flex items-center gap-2 rounded-full bg-brand px-5 py-3 text-[16px] font-extrabold text-white shadow-[0_8px_20px_-6px_rgba(0,108,163,0.7)] transition active:scale-[0.97]"
             >
-              <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <svg viewBox="0 0 24 24" className="h-[18px] w-[18px]" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <path d="M12 3v12M7 10l5 5 5-5M5 21h14" />
               </svg>
               Download the app
             </StoreLink>
-            <p className="mt-1.5 text-[11px] font-semibold text-slate-700">Free · English &amp; Español</p>
           </div>
         </div>
 
+        <p className="absolute inset-x-0 bottom-3 text-center">
+          <span className="rounded-full bg-white/90 px-3 py-1 text-[11px] font-semibold text-slate-700 shadow-sm">
+            Free · iPhone &amp; Android · English &amp; Español
+          </span>
+        </p>
       </div>
     </section>
   );
