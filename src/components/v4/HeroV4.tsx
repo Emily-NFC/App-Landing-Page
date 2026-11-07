@@ -29,10 +29,10 @@ export function HeroV4() {
           <h1 className="whitespace-nowrap text-[clamp(24px,7.9vw,34px)] font-black leading-none tracking-tight text-slate-900">
             You&apos;re here. <span className="text-brand">Let&apos;s move.</span>
           </h1>
-          <p className="mt-2 whitespace-nowrap text-[clamp(13px,4.1vw,17px)] font-normal leading-snug text-slate-800">
+          <p className="mt-3 whitespace-nowrap text-[clamp(12px,3.7vw,15px)] font-normal leading-snug text-slate-800">
             Pick your coach. Start your fitness journey.
           </p>
-          <div id="get-app" className="mt-3 scroll-mt-28">
+          <div id="get-app" className="mt-4 scroll-mt-28">
             <span className="relative inline-flex">
               <StoreLink
                 placement="hero"
