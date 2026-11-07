@@ -21,7 +21,7 @@
   --animate-pop-in: pop-in 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) both;
   --animate-flame-wiggle: flame-wiggle 1.6s ease-in-out infinite;
   --animate-badge-pop: badge-pop 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.35s both;
-  --animate-cta-pulse: cta-pulse 2.6s ease-in-out infinite;
+  --animate-cta-pulse: cta-pulse 2s ease-in-out infinite;
 }
 
 @keyframes pop-in {
@@ -64,8 +64,8 @@
     box-shadow: 0 10px 24px -8px rgba(0, 108, 163, 0.7), 0 0 0 0 rgba(0, 108, 163, 0.25);
   }
   50% {
-    transform: scale(1.02);
-    box-shadow: 0 10px 24px -8px rgba(0, 108, 163, 0.7), 0 0 0 6px rgba(0, 108, 163, 0.12);
+    transform: scale(1.06);
+    box-shadow: 0 10px 24px -8px rgba(0, 108, 163, 0.7), 0 0 0 7px rgba(0, 108, 163, 0.18);
   }
 }
 
