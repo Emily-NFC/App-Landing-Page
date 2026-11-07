@@ -6,17 +6,17 @@ const cards = [
     tag: "Strength",
     title: "Build strength.",
     line: "Guided workouts for every fitness level.",
-    src: "/v4/strength2.jpg",
-    alt: "Coach Miles on the Fitness Court®",
-    pos: "object-[70%_30%]",
+    src: "/v2/w-blocks.jpg",
+    alt: "Coach Walt on the Fitness Court® rings",
+    pos: "object-[50%_30%]",
   },
   {
     tag: "Cardio",
     title: "Boost cardio.",
     line: "Walks and trail routes to keep you moving.",
-    src: "/v4/cardio.jpg",
+    src: "/v4/cardio-home.jpg",
     alt: "Coach Avery running on a park trail",
-    pos: "object-[60%_40%]",
+    pos: "object-[50%_55%]",
   },
 ];
 
@@ -29,10 +29,10 @@ export function MoreWays() {
           <StoreLink
             key={tag}
             placement={`more_${tag.toLowerCase()}`}
-            className="relative block aspect-[4/3] overflow-hidden rounded-2xl bg-slate-200 shadow-[0_6px_18px_-8px_rgba(0,0,0,0.3)] transition active:scale-[0.985]"
+            className="relative block aspect-[4/5] overflow-hidden rounded-2xl bg-slate-200 shadow-[0_6px_18px_-8px_rgba(0,0,0,0.3)] transition active:scale-[0.985]"
           >
             <Image src={src} alt={alt} fill sizes="(max-width: 448px) 50vw, 220px" className={`object-cover ${pos}`} />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#0b2a4a]/90 via-[#0b2a4a]/55 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0b2a4a]/90 via-[#0b2a4a]/25 to-transparent" />
             <div className="absolute inset-0 flex flex-col p-2.5">
               <span className="self-start rounded-full bg-brand px-2 py-0.5 text-[9px] font-bold uppercase tracking-[0.1em] text-white">
                 {tag}

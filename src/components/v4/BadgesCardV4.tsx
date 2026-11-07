@@ -10,7 +10,7 @@ export function BadgesCardV4() {
           <h2 className="mt-1 text-[20px] font-black leading-tight tracking-tight">Show up. Earn badges. Keep the streak.</h2>
           <p className="mt-1.5 text-[12px] leading-snug text-white/85">Check in, build your streak, and take on challenges.</p>
         </div>
-        <div className="absolute -right-2 bottom-0 h-[88%] w-[40%]">
+        <div className="absolute right-1 bottom-0 h-[82%] w-[36%]">
           <Image src="/v4/miles-badge.png" alt="Coach Miles holding a badge" fill sizes="180px" className="object-contain object-bottom" />
         </div>
         <div className="relative mt-3 flex max-w-[66%] gap-0.5">
