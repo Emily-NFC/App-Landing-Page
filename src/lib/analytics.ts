@@ -1,5 +1,6 @@
 import { track } from "@vercel/analytics";
 import { sendGAEvent } from "@next/third-parties/google";
+import Clarity from "@microsoft/clarity";
 
 type Props = Record<string, string | number | boolean | null>;
 
@@ -20,5 +21,11 @@ export function trackEvent(name: string, props: Props = {}) {
     sendGAEvent("event", name, merged);
   } catch {
     // gtag may not be loaded yet — fail silently
+  }
+
+  try {
+    Clarity.event(name);
+  } catch {
+    // Clarity only loads in production — fail silently
   }
 }
