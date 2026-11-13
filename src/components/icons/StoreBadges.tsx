@@ -2,7 +2,7 @@
 
 import { trackEvent } from "@/lib/analytics";
 
-type Placement = "hero" | "checkin" | "sticky";
+type Placement = "hero" | "checkin" | "sticky" | "final" | "sheet";
 
 export function AppStoreBadge({
   className = "",

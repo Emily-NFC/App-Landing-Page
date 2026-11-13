@@ -1,25 +1,30 @@
-import { Header } from "@/components/Header";
-import { Hero } from "@/components/Hero";
-import { CheckInBanner } from "@/components/CheckInBanner";
-import { FeaturesRow } from "@/components/FeaturesRow";
-import { MovementsRow } from "@/components/MovementsRow";
-import { VideoSection } from "@/components/VideoSection";
-import { FindCourt } from "@/components/FindCourt";
-import { StickyBanner } from "@/components/StickyBanner";
+import { StickyBannerV4 } from "@/components/v4/StickyBannerV4";
+import { HeroV4 } from "@/components/v4/HeroV4";
+import { CheckInCard } from "@/components/v4/CheckInCard";
+import { CoachesCard } from "@/components/v4/CoachesCard";
+import { MoreWays } from "@/components/v4/MoreWays";
+import { BadgesCardV4 } from "@/components/v4/BadgesCardV4";
+import { FinalCtaV4 } from "@/components/v4/FinalCtaV4";
+import { FooterLinks } from "@/components/v4/FooterLinks";
+import { InfoSheetProvider } from "@/components/v4/InfoSheet";
+import { FeaturesRowV4 } from "@/components/v4/FeaturesRowV4";
+import { MovementsV4 } from "@/components/v4/MovementsV4";
 
 export default function Page() {
   return (
-    <>
-      <StickyBanner />
-      <Header />
+    <InfoSheetProvider>
+      <StickyBannerV4 />
       <main className="flex-1">
-        <Hero />
-        <CheckInBanner />
-        <FeaturesRow />
-        <MovementsRow />
-        <VideoSection />
-        <FindCourt />
+        <HeroV4 />
+        <FeaturesRowV4 />
+        <CoachesCard />
+        <MovementsV4 />
+        <CheckInCard />
+        <MoreWays />
+        <BadgesCardV4 />
+        <FooterLinks />
+        <FinalCtaV4 />
       </main>
-    </>
+    </InfoSheetProvider>
   );
 }
