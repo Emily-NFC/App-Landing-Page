@@ -7,7 +7,7 @@ export function BadgesCardV4() {
       <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#0b3a5c] to-brand p-4 text-white shadow-[0_8px_24px_-12px_rgba(0,108,163,0.5)]">
         <div className="max-w-[64%]">
           <div className="text-[10px] font-bold uppercase tracking-[0.14em] text-white/75">Badges &amp; challenges</div>
-          <h2 className="mt-1 text-[20px] font-black leading-tight tracking-tight">Show up. Earn badges. Keep the streak.</h2>
+          <h2 className="mt-1 text-[20px] font-black leading-tight tracking-tight">Show up. Earn badges. Get on the leaderboard.</h2>
           <p className="mt-1.5 text-[12px] leading-snug text-white/85">Check in, build your streak, and take on challenges.</p>
         </div>
         <div className="absolute -bottom-[22%] -right-[3%] h-[118%] w-[50%]">

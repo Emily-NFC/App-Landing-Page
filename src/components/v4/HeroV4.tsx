@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { StoreLink } from "./StoreLink";
+import { AppStoreBadge, GooglePlayBadge } from "../icons/StoreBadges";
 
 // Phone-width frame; the photo runs up behind the banner and logo.
 export function HeroV4() {
@@ -36,7 +37,7 @@ export function HeroV4() {
             <span className="relative inline-flex">
               <StoreLink
                 placement="hero"
-                className="relative inline-flex items-center gap-1.5 rounded-full bg-brand px-4 py-2 text-[14px] font-bold text-white shadow-[0_10px_24px_-8px_rgba(0,108,163,0.7)] transition active:scale-[0.97] motion-safe:animate-cta-pulse"
+                className="relative inline-flex items-center gap-1.5 rounded-full bg-red-600 px-4 py-2 text-[14px] font-bold text-white shadow-[0_10px_24px_-8px_rgba(220,38,38,0.7)] hover:bg-red-700 transition active:scale-[0.97] motion-safe:animate-cta-pulse"
               >
                 <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <path d="M12 3v12M7 10l5 5 5-5M5 21h14" />
@@ -52,6 +53,16 @@ export function HeroV4() {
             Free · iPhone &amp; Android · English &amp; Español
           </span>
         </p>
+      </div>
+
+      {/* Store badges right under the hero photo. */}
+      <div className="mx-auto max-w-md px-4 pt-3">
+        <div className="rounded-2xl bg-white p-3 shadow-[0_4px_18px_-6px_rgba(0,0,0,0.12)]">
+          <div className="grid grid-cols-2 gap-2.5">
+            <AppStoreBadge placement="hero" />
+            <GooglePlayBadge placement="hero" />
+          </div>
+        </div>
       </div>
     </section>
   );

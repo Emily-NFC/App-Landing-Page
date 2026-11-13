@@ -6,14 +6,12 @@ import { trackEvent } from "@/lib/analytics";
 import { StoreLink } from "./StoreLink";
 
 const coaches = [
-  { id: "miles", name: "Miles", role: "Strength & cardio", line: "Find your pace." },
-  { id: "avery", name: "Avery", role: "Outdoor fitness", line: "Start where you are." },
-  { id: "walt", name: "Walt", role: "Strength & balance", line: "It's never too late to get strong." },
-  { id: "mae", name: "Mae", role: "Mobility & movement", line: "Strong for the things you love." },
+  { id: "miles", name: "Miles", role: "Strength & cardio", line: "Find your pace.", prompt: "Ready for today's workout? Tell me how you're feeling and we'll find your pace.", reply: "Feeling good. Let's go! 💪" },
+  { id: "avery", name: "Avery", role: "Outdoor fitness", line: "Start where you are.", prompt: "Great day to train outside! I'll pick a workout to match the weather.", reply: "Perfect, let's get outside! ☀️" },
+  { id: "walt", name: "Walt", role: "Strength & balance", line: "It's never too late to get strong.", prompt: "Good to see you. Let's build some strength together today.", reply: "I'm in. Let's get strong! 🏋️" },
+  { id: "mae", name: "Mae", role: "Mobility & movement", line: "Strong for the things you love.", prompt: "Hi there! Let's loosen up and find a workout that fits you today.", reply: "Ready to stretch it out! 🙌" },
 ];
 
-/** The coach's opening line on the app's Home screen. */
-const COACH_PROMPT = "Ready for today's workout? Tell me how you're feeling and I'll get you started.";
 
 export function CoachesCard() {
   const [picked, setPicked] = useState(coaches[0]);
@@ -58,9 +56,9 @@ export function CoachesCard() {
   return (
     <section id="coaches" className="mx-auto max-w-md px-4 pb-3">
       <div className="rounded-2xl bg-white p-4 shadow-[0_4px_18px_-6px_rgba(0,0,0,0.08)]">
-        <div className="text-[10px] font-bold uppercase tracking-[0.14em] text-brand">Guided coaches</div>
-        <h2 className="mt-1 text-[24px] font-black leading-tight tracking-tight text-slate-900">Pick your coach.</h2>
-        <p className="mt-0.5 text-[13px] text-slate-600">Chat with your coach anytime. They talk you through every move.</p>
+        <div className="text-[10px] font-bold uppercase tracking-[0.14em] text-brand">How it works</div>
+        <h2 className="mt-1 text-[24px] font-black leading-tight tracking-tight text-slate-900">Pick your coach &amp; get started.</h2>
+        <p className="mt-0.5 text-[13px] text-slate-600">Chat with your coach and pick your workout.</p>
 
         <div className="mt-3 grid grid-cols-4 gap-2" role="radiogroup" aria-label="Choose a coach">
           {coaches.map((coach) => {
@@ -128,14 +126,14 @@ export function CoachesCard() {
                     ))}
                   </div>
                 ) : (
-                  <p className="mt-0.5 animate-pop-in text-[13px] leading-snug text-slate-800">{COACH_PROMPT}</p>
+                  <p className="mt-0.5 animate-pop-in text-[13px] leading-snug text-slate-800">{picked.prompt}</p>
                 )}
               </div>
             </div>
             {step === 2 && (
               <div className="flex justify-end">
                 <div className="animate-pop-in rounded-2xl rounded-br-md bg-brand px-3 py-2 text-[13px] font-semibold text-white shadow-md">
-                  Feeling good. Let&apos;s go! 💪
+                  {picked.reply}
                 </div>
               </div>
             )}

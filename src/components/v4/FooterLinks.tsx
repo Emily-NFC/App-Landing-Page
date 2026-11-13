@@ -1,6 +1,6 @@
 export function FooterLinks() {
   return (
-    <section className="mx-auto max-w-md px-4 pb-6">
+    <section className="mx-auto max-w-md px-4 pb-3">
       <div className="flex items-stretch rounded-2xl bg-white shadow-[0_4px_18px_-6px_rgba(0,0,0,0.08)]">
         <a
           href="https://www.nationalfitnesscampaign.com/map"
