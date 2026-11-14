@@ -9,7 +9,8 @@ export function ClarityInit({ projectId }: { projectId: string }) {
     Clarity.init(projectId);
 
     // Tag the session with the QR code's court so recordings can be filtered per court.
-    const court = new URLSearchParams(window.location.search).get("court");
+    const params = new URLSearchParams(window.location.search);
+    const court = params.get("court") ?? params.get("qr");
     if (court) Clarity.setTag("court_id", court);
     const { source, medium } = getAttribution();
     Clarity.setTag("traffic_source", source);
