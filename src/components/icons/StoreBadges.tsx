@@ -1,6 +1,7 @@
 "use client";
 
 import { trackEvent } from "@/lib/analytics";
+import { APP_STORE_URL, GOOGLE_PLAY_URL, withAttribution } from "@/lib/storeLinks";
 
 type Placement = "hero" | "checkin" | "sticky" | "final" | "sheet";
 
@@ -13,11 +14,14 @@ export function AppStoreBadge({
 }) {
   return (
     <a
-      href="https://apps.apple.com/us/app/fitness-court/id563421203"
+      href={APP_STORE_URL}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Download on the App Store"
-      onClick={() => trackEvent("store_click", { store: "ios", placement })}
+      onClick={(event) => {
+        event.currentTarget.href = withAttribution(APP_STORE_URL);
+        trackEvent("store_click", { store: "ios", placement });
+      }}
       className={`flex items-center justify-center gap-2 rounded-xl bg-black px-3 py-2.5 text-white shadow-sm transition active:scale-[0.98] ${className}`}
     >
       <svg viewBox="0 0 24 24" className="h-6 w-6 shrink-0" fill="currentColor" aria-hidden="true">
@@ -40,11 +44,14 @@ export function GooglePlayBadge({
 }) {
   return (
     <a
-      href="https://play.google.com/store/apps/details?id=com.nationalfitnesscampaign.FitnessCourtLive"
+      href={GOOGLE_PLAY_URL}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Get it on Google Play"
-      onClick={() => trackEvent("store_click", { store: "android", placement })}
+      onClick={(event) => {
+        event.currentTarget.href = withAttribution(GOOGLE_PLAY_URL);
+        trackEvent("store_click", { store: "android", placement });
+      }}
       className={`flex items-center justify-center gap-2 rounded-xl bg-black px-3 py-2.5 text-white shadow-sm transition active:scale-[0.98] ${className}`}
     >
       <svg viewBox="0 0 24 24" className="h-6 w-6 shrink-0" aria-hidden="true">
