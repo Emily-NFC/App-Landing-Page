@@ -1,7 +1,7 @@
 "use client";
 
 import { trackEvent } from "@/lib/analytics";
-import { APP_STORE_URL, GOOGLE_PLAY_URL, pickStoreUrl } from "@/lib/storeLinks";
+import { APP_STORE_URL, isGooglePlay, pickStoreUrl } from "@/lib/storeLinks";
 
 type Props = {
   placement: string;
@@ -16,8 +16,12 @@ export function StoreLink({ placement, className = "", children, onTap }: Props)
     onTap?.();
     if (typeof navigator === "undefined") return;
     const url = pickStoreUrl(navigator.userAgent);
-    trackEvent("store_click", { store: url === GOOGLE_PLAY_URL ? "android" : "ios", placement });
-    if (url === APP_STORE_URL) return;
+    trackEvent("store_click", { store: isGooglePlay(url) ? "android" : "ios", placement });
+    if (!isGooglePlay(url)) {
+      // Let the App Store link open natively, now tagged with the visitor's source.
+      event.currentTarget.href = url;
+      return;
+    }
     event.preventDefault();
     window.open(url, "_blank", "noopener,noreferrer");
   }

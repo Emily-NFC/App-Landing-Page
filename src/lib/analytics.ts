@@ -1,6 +1,7 @@
 import { track } from "@vercel/analytics";
 import { sendGAEvent } from "@next/third-parties/google";
 import Clarity from "@microsoft/clarity";
+import { getAttribution } from "@/lib/storeLinks";
 
 type Props = Record<string, string | number | boolean | null>;
 
@@ -9,7 +10,14 @@ export function trackEvent(name: string, props: Props = {}) {
 
   const params = new URLSearchParams(window.location.search);
   const court = params.get("court");
-  const merged: Props = court ? { ...props, court_id: court } : props;
+  const { source, medium, campaign } = getAttribution();
+  const merged: Props = {
+    ...props,
+    traffic_source: source,
+    traffic_medium: medium,
+    ...(campaign ? { traffic_campaign: campaign } : {}),
+    ...(court ? { court_id: court } : {}),
+  };
 
   try {
     track(name, merged);
