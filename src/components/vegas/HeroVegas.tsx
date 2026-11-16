@@ -30,7 +30,7 @@ export function HeroVegas() {
             You&apos;re here. <span className="text-brand">Let&apos;s move.</span>
           </h1>
           <p className="mt-3 whitespace-nowrap text-[clamp(12px,3.7vw,15px)] font-normal leading-snug text-slate-800">
-            Explore Las Vegas or get the free app.
+            Explore the Trail Line map or get the free app.
           </p>
           <div id="get-app" className="mt-4 flex scroll-mt-28 flex-wrap items-center justify-center gap-2">
             <ExploreMapLink
@@ -41,7 +41,7 @@ export function HeroVegas() {
                 <path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2Z" />
                 <path d="M9 4v14M15 6v14" />
               </svg>
-              Explore the map
+              Trail Line map
             </ExploreMapLink>
             <StoreLink
               placement="hero"

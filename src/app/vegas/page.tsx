@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { StickyBannerV4 } from "@/components/v4/StickyBannerV4";
 import { HeroVegas } from "@/components/vegas/HeroVegas";
-import { ExploreMapCard } from "@/components/vegas/ExploreMapCard";
 import { TrailLineCard } from "@/components/vegas/TrailLineCard";
 import { CheckInCard } from "@/components/v4/CheckInCard";
 import { CoachesCard } from "@/components/v4/CoachesCard";
@@ -22,13 +21,12 @@ export const metadata: Metadata = {
 export default function VegasPage() {
   return (
     <InfoSheetProvider>
-      <StickyBannerV4 title="You’re in Las Vegas." subtitle="Explore the map or get the free app." />
+      <StickyBannerV4 title="You’re in Las Vegas." subtitle="Explore the Trail Line map or get the free app." />
       <main className="flex-1">
         <HeroVegas />
         <FeaturesRowV4 />
         <CoachesCard />
         <TrailLineCard />
-        <ExploreMapCard />
         <MovementsV4 />
         <CheckInCard />
         <MoreWays />
