@@ -12,7 +12,7 @@ export function ExploreMapLink({ placement, className = "", children }: Props) {
     event.currentTarget.href = vegasMapUrl();
   }
   return (
-    <a href={VEGAS_MAP_URL + "#/map"} onClick={handleClick} className={className}>
+    <a href={VEGAS_MAP_URL + "?view=map#/map"} onClick={handleClick} className={className}>
       {children}
     </a>
   );

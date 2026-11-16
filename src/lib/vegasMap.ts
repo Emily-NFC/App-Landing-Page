@@ -10,6 +10,8 @@ export function vegasMapUrl(search: string = typeof window === "undefined" ? "" 
     const value = from.get(key);
     if (value) url.searchParams.set(key, value);
   }
+  // The map alone, without the web app's tab bar (fitness-court-garden ?view=map).
+  url.searchParams.set("view", "map");
   url.hash = "/map";
   return url.toString();
 }
