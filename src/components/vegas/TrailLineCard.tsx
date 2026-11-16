@@ -4,7 +4,7 @@ import { ExploreMapLink } from "./ExploreMapLink";
 const facts = [
   { big: "14", small: "stations", line: "along the Bonanza and Lone Mountain Trails" },
   { big: "7", small: "minutes", line: "Trail Line Energy Boost: walk, run, three pushes with Avery" },
-  { big: "Go", small: "far", line: "Cardio Challenge: start at any station and see how far you go" },
+  { big: "GO", small: "far", line: "Cardio Challenge: start at any station and see how far you go" },
 ];
 
 // The Las Vegas Trail Line map, in the Trail Line green: the one thing here the app doesn't have.
