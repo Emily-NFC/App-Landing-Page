@@ -35,7 +35,7 @@ export function HeroVegas() {
           <div id="get-app" className="mt-4 flex scroll-mt-28 flex-wrap items-center justify-center gap-2">
             <StoreLink
               placement="hero"
-              className="relative inline-flex items-center gap-1.5 rounded-full bg-red-600 px-4 py-2 text-[14px] font-bold text-white shadow-[0_10px_24px_-8px_rgba(220,38,38,0.7)] transition hover:bg-red-700 active:scale-[0.97]"
+              className="relative inline-flex min-w-[200px] items-center justify-center gap-1.5 rounded-full bg-red-600 px-4 py-2 text-[14px] font-bold text-white shadow-[0_10px_24px_-8px_rgba(220,38,38,0.7)] transition hover:bg-red-700 active:scale-[0.97]"
             >
               <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <path d="M12 3v12M7 10l5 5 5-5M5 21h14" />
@@ -44,13 +44,13 @@ export function HeroVegas() {
             </StoreLink>
             <ExploreMapLink
               placement="hero"
-              className="inline-flex items-center gap-1.5 rounded-full bg-brand px-4 py-2 text-[14px] font-bold text-white shadow-[0_10px_24px_-8px_rgba(0,108,163,0.7)] transition hover:brightness-110 active:scale-[0.97]"
+              className="inline-flex min-w-[200px] items-center justify-center gap-1.5 rounded-full bg-[#0F7B4B] px-4 py-2 text-[14px] font-bold text-white shadow-[0_10px_24px_-8px_rgba(15,123,75,0.7)] transition hover:bg-[#0A4A2E] active:scale-[0.97]"
             >
               <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2Z" />
                 <path d="M9 4v14M15 6v14" />
               </svg>
-              Trail Line map
+              View Trail Line Map
             </ExploreMapLink>
           </div>
         </div>
