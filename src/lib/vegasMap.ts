@@ -13,6 +13,8 @@ export function vegasMapUrl(search: string = typeof window === "undefined" ? "" 
   }
   // The map alone, without the web app's tab bar (fitness-court-garden ?view=map).
   url.searchParams.set("view", "map");
+  // So the map's Back button returns here.
+  if (typeof window !== "undefined") url.searchParams.set("back", window.location.href);
   url.hash = "/map";
   return url.toString();
 }
