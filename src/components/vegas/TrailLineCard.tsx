@@ -3,8 +3,9 @@ import { ExploreMapLink } from "./ExploreMapLink";
 
 const facts = [
   { big: "14", small: "Stations" },
+  // Bonanza and Lone Mountain trails (3.2 mi) + the park loops (7.7 mi), trailline-city-portal pilot data.
+  { big: "11", small: "Miles of trail" },
   { big: "7 min", small: "Energy Boost" },
-  { big: "GO", small: "Cardio Challenge" },
 ];
 
 // The Las Vegas Trail Line map, in the Trail Line green: the one thing here the app doesn't have.
