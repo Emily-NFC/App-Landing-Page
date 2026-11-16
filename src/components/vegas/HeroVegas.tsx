@@ -68,6 +68,16 @@ export function HeroVegas() {
             <AppStoreBadge placement="hero" />
             <GooglePlayBadge placement="hero" />
           </div>
+          <ExploreMapLink
+            placement="store_box"
+            className="mt-2.5 flex w-full items-center justify-center gap-2 rounded-xl bg-[#0F7B4B] px-4 py-3 text-[15px] font-bold text-white transition hover:bg-[#0A4A2E] active:scale-[0.98]"
+          >
+            <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2Z" />
+              <path d="M9 4v14M15 6v14" />
+            </svg>
+            View the Trail Line Map
+          </ExploreMapLink>
         </div>
       </div>
     </section>
