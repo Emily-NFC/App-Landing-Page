@@ -4,7 +4,7 @@ import { ExploreMapLink } from "./ExploreMapLink";
 // The Las Vegas map: Trail Lines, Fitness Courts and parks, no download needed.
 export function ExploreMapCard() {
   return (
-    <section className="mx-auto max-w-md px-4 pt-3">
+    <section className="mx-auto max-w-md px-4 pb-3">
       <ExploreMapLink
         placement="map_card"
         className="block overflow-hidden rounded-2xl bg-white shadow-[0_4px_18px_-6px_rgba(0,0,0,0.12)] transition active:scale-[0.99]"

@@ -26,9 +26,9 @@ export default function VegasPage() {
       <main className="flex-1">
         <HeroVegas />
         <FeaturesRowV4 />
-        <ExploreMapCard />
-        <TrailLineCard />
         <CoachesCard />
+        <TrailLineCard />
+        <ExploreMapCard />
         <MovementsV4 />
         <CheckInCard />
         <MoreWays />

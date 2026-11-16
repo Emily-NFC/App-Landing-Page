@@ -10,7 +10,7 @@ const facts = [
 // Las Vegas Trail Lines: marked paths with stations, in the Trail Line green.
 export function TrailLineCard() {
   return (
-    <section className="mx-auto max-w-md px-4 pt-3">
+    <section className="mx-auto max-w-md px-4 pb-3">
       <div className="overflow-hidden rounded-2xl bg-[#0A4A2E] text-white shadow-[0_8px_24px_-10px_rgba(10,74,46,0.7)]">
         <div className="relative aspect-[1200/676] w-full">
           <Image
