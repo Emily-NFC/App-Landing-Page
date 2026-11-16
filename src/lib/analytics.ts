@@ -9,7 +9,7 @@ export function trackEvent(name: string, props: Props = {}) {
   if (typeof window === "undefined") return;
 
   const params = new URLSearchParams(window.location.search);
-  const court = params.get("court") ?? params.get("qr");
+  const court = params.get("court") ?? params.get("qr") ?? params.get("s");
   const { source, medium, campaign } = getAttribution();
   const merged: Props = {
     ...props,

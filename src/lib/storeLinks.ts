@@ -46,8 +46,8 @@ function fromReferrer(referrer: string): Attribution {
 export function getAttribution(): Attribution {
   if (typeof window === "undefined") return { source: "direct", medium: "direct", campaign: "" };
   const params = new URLSearchParams(window.location.search);
-  // QR codes carry ?court= or, on the newer codes, ?qr=<code name>.
-  const court = clean(params.get("court")) || clean(params.get("qr"));
+  // QR codes carry ?court= or, on the newer codes, ?qr=<code name>; Vegas signs also carry ?s=<sign>.
+  const court = clean(params.get("court")) || clean(params.get("qr")) || clean(params.get("s"));
   if (court) return { source: "qr", medium: "fitness_court", campaign: court };
   const utmSource = clean(params.get("utm_source"));
   if (utmSource) {
