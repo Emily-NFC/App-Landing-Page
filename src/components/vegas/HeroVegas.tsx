@@ -30,9 +30,18 @@ export function HeroVegas() {
             You&apos;re here. <span className="text-brand">Let&apos;s move.</span>
           </h1>
           <p className="mt-3 whitespace-nowrap text-[clamp(12px,3.7vw,15px)] font-normal leading-snug text-slate-800">
-            Explore the Trail Line map or get the free app.
+            Get the free app or explore the Trail Line map.
           </p>
           <div id="get-app" className="mt-4 flex scroll-mt-28 flex-wrap items-center justify-center gap-2">
+            <StoreLink
+              placement="hero"
+              className="relative inline-flex items-center gap-1.5 rounded-full bg-red-600 px-4 py-2 text-[14px] font-bold text-white shadow-[0_10px_24px_-8px_rgba(220,38,38,0.7)] transition hover:bg-red-700 active:scale-[0.97]"
+            >
+              <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M12 3v12M7 10l5 5 5-5M5 21h14" />
+              </svg>
+              Download the app
+            </StoreLink>
             <ExploreMapLink
               placement="hero"
               className="inline-flex items-center gap-1.5 rounded-full bg-brand px-4 py-2 text-[14px] font-bold text-white shadow-[0_10px_24px_-8px_rgba(0,108,163,0.7)] transition hover:brightness-110 active:scale-[0.97]"
@@ -43,15 +52,6 @@ export function HeroVegas() {
               </svg>
               Trail Line map
             </ExploreMapLink>
-            <StoreLink
-              placement="hero"
-              className="relative inline-flex items-center gap-1.5 rounded-full bg-red-600 px-4 py-2 text-[14px] font-bold text-white shadow-[0_10px_24px_-8px_rgba(220,38,38,0.7)] transition hover:bg-red-700 active:scale-[0.97]"
-            >
-              <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <path d="M12 3v12M7 10l5 5 5-5M5 21h14" />
-              </svg>
-              Download the app
-            </StoreLink>
           </div>
         </div>
 

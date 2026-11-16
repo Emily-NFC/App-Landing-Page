@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 export default function VegasPage() {
   return (
     <InfoSheetProvider>
-      <StickyBannerV4 title="You’re in Las Vegas." subtitle="Explore the Trail Line map or get the free app." />
+      <StickyBannerV4 title="You’re in Las Vegas." subtitle="Get the free app or explore the Trail Line map." />
       <main className="flex-1">
         <HeroVegas />
         <FeaturesRowV4 />
