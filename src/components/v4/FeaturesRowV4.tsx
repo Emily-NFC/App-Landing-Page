@@ -51,7 +51,7 @@ export function FeaturesRowV4({ extraTile }: { extraTile?: React.ReactNode } = {
             type="button"
             onClick={() => openSheet(f)}
             className={`flex flex-col items-center gap-1.5 rounded-2xl border px-1.5 pt-3 pb-2.5 text-center transition active:scale-[0.97] ${
-              i === 0 ? "border-[#9fcbe7] bg-gradient-to-b from-[#f2f9fe] to-white" : "border-slate-200 bg-white"
+              i === 0 && !extraTile ? "border-[#9fcbe7] bg-gradient-to-b from-[#f2f9fe] to-white" : "border-slate-200 bg-white"
             }`}
           >
             <span className="relative h-10 w-10">

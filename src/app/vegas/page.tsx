@@ -30,7 +30,7 @@ export default function VegasPage() {
         <TrailLineCard />
         <MovementsV4 />
         <CheckInCard />
-        <MoreWays />
+        <MoreWays cardio={{ src: "/vegas/cardio-trail.jpg", alt: "The Trail Line loops beside the Fitness Court® at Bill Briare Park", pos: "object-center" }} />
         <BadgesCardV4 />
         <FooterLinks />
         <FinalCtaV4 />
