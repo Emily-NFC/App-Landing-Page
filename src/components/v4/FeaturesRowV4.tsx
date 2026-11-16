@@ -34,6 +34,10 @@ const features: (SheetContent & { name: string; blurb: string })[] = [
 ];
 
 /** Guided Workouts / Check In / Track Your Health, each opening the sheet. */
+/** With a fourth tile, names and blurbs get two lines each so every link lines up. */
+export const TILE_NAME = "flex min-h-[2.5em] items-center";
+export const TILE_BLURB = "min-h-[2.5em]";
+
 /** extraTile: a fourth tile at the end of the row (the Las Vegas page's map). */
 export function FeaturesRowV4({ extraTile }: { extraTile?: React.ReactNode } = {}) {
   const openSheet = useInfoSheet();
@@ -53,9 +57,9 @@ export function FeaturesRowV4({ extraTile }: { extraTile?: React.ReactNode } = {
             <span className="relative h-10 w-10">
               <Image src={f.icon} alt="" fill sizes="80px" className="object-contain" />
             </span>
-            <span className="text-[13px] font-bold leading-tight text-slate-900">{f.name}</span>
-            <span className="text-[11.5px] leading-tight text-slate-500">{f.blurb}</span>
-            <span className="text-[11px] font-bold text-brand">See how ›</span>
+            <span className={`text-[13px] font-bold leading-tight text-slate-900 ${extraTile ? TILE_NAME : ""}`}>{f.name}</span>
+            <span className={`text-[11.5px] leading-tight text-slate-500 ${extraTile ? TILE_BLURB : ""}`}>{f.blurb}</span>
+            <span className={`text-[11px] font-bold text-brand ${extraTile ? "mt-auto" : ""}`}>See how ›</span>
           </button>
         ))}
         {extraTile}
