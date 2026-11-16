@@ -34,12 +34,13 @@ const features: (SheetContent & { name: string; blurb: string })[] = [
 ];
 
 /** Guided Workouts / Check In / Track Your Health, each opening the sheet. */
-export function FeaturesRowV4() {
+/** extraTile: a fourth tile at the end of the row (the Las Vegas page's map). */
+export function FeaturesRowV4({ extraTile }: { extraTile?: React.ReactNode } = {}) {
   const openSheet = useInfoSheet();
 
   return (
     <section className="mx-auto max-w-md px-4 pb-3">
-      <div className="grid grid-cols-3 gap-2">
+      <div className={`grid gap-2 ${extraTile ? "grid-cols-4" : "grid-cols-3"}`}>
         {features.map((f, i) => (
           <button
             key={f.id}
@@ -57,6 +58,7 @@ export function FeaturesRowV4() {
             <span className="text-[11px] font-bold text-brand">See how ›</span>
           </button>
         ))}
+        {extraTile}
       </div>
     </section>
   );

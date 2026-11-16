@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { StickyBannerV4 } from "@/components/v4/StickyBannerV4";
 import { HeroVegas } from "@/components/vegas/HeroVegas";
 import { TrailLineCard } from "@/components/vegas/TrailLineCard";
+import { MapTile } from "@/components/vegas/MapTile";
 import { CheckInCard } from "@/components/v4/CheckInCard";
 import { CoachesCard } from "@/components/v4/CoachesCard";
 import { MoreWays } from "@/components/v4/MoreWays";
@@ -24,7 +25,7 @@ export default function VegasPage() {
       <StickyBannerV4 title="You’re in Las Vegas." subtitle="Get the free app or explore the Trail Line map." />
       <main className="flex-1">
         <HeroVegas />
-        <FeaturesRowV4 />
+        <FeaturesRowV4 extraTile={<MapTile />} />
         <CoachesCard />
         <TrailLineCard />
         <MovementsV4 />
