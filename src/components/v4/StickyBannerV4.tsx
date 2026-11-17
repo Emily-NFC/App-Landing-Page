@@ -1,7 +1,12 @@
 import Image from "next/image";
 import { StoreLink } from "./StoreLink";
 
-export function StickyBannerV4() {
+type Props = { title?: string; subtitle?: string };
+
+export function StickyBannerV4({
+  title = "You\u2019re at a Fitness Court®.",
+  subtitle = "Get the free app and start your workout.",
+}: Props = {}) {
   return (
     <div className="sticky top-0 z-40 h-0 px-3 pt-3">
       <div className="mx-auto flex max-w-md items-center gap-3 rounded-2xl bg-brand px-3 py-2.5 text-white shadow-[0_10px_30px_-10px_rgba(0,108,163,0.6)]">
@@ -15,8 +20,8 @@ export function StickyBannerV4() {
           <Image src="/nfc-logo.png" alt="National Fitness Campaign" fill sizes="80px" quality={95} className="object-contain" />
         </a>
         <div className="flex-1 leading-tight">
-          <div className="text-[13px] font-bold">You&apos;re at a Fitness Court®.</div>
-          <div className="text-[11px] opacity-90">Get the free app and start your workout.</div>
+          <div className="text-[13px] font-bold">{title}</div>
+          <div className="text-[11px] opacity-90">{subtitle}</div>
         </div>
         <StoreLink
           placement="sticky"

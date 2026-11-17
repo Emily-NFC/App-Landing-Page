@@ -20,12 +20,13 @@ const cards = [
   },
 ];
 
-export function MoreWays() {
+/** cardio: swaps the Cardio card's photo (the Las Vegas page shows a Trail Line close-up). */
+export function MoreWays({ cardio }: { cardio?: { src: string; alt: string; pos: string } } = {}) {
   return (
     <section className="mx-auto max-w-md px-4 pb-3">
       <div className="mb-2 text-[10px] font-bold uppercase tracking-[0.14em] text-brand">More ways to move</div>
       <div className="grid grid-cols-2 gap-2.5">
-        {cards.map(({ tag, title, line, src, alt, pos }) => (
+        {cards.map((c) => ({ ...c, ...(c.tag === "Cardio" ? cardio : undefined) })).map(({ tag, title, line, src, alt, pos }) => (
           <StoreLink
             key={tag}
             placement={`more_${tag.toLowerCase()}`}

@@ -34,29 +34,34 @@ const features: (SheetContent & { name: string; blurb: string })[] = [
 ];
 
 /** Guided Workouts / Check In / Track Your Health, each opening the sheet. */
-export function FeaturesRowV4() {
+/** With a fourth tile, names and blurbs get two lines each so every link lines up. */
+export const TILE_NAME = "flex min-h-[2.5em] items-center";
+export const TILE_BLURB = "min-h-[2.5em]";
+
+/** extraTile: a fourth tile, second in the row after Guided Workouts (the Las Vegas page's map). */
+export function FeaturesRowV4({ extraTile }: { extraTile?: React.ReactNode } = {}) {
   const openSheet = useInfoSheet();
 
   return (
     <section className="mx-auto max-w-md px-4 pb-3">
-      <div className="grid grid-cols-3 gap-2">
+      <div className={`grid gap-2 ${extraTile ? "grid-cols-4" : "grid-cols-3"}`}>
         {features.map((f, i) => (
           <button
             key={f.id}
             type="button"
             onClick={() => openSheet(f)}
             className={`flex flex-col items-center gap-1.5 rounded-2xl border px-1.5 pt-3 pb-2.5 text-center transition active:scale-[0.97] ${
-              i === 0 ? "border-[#9fcbe7] bg-gradient-to-b from-[#f2f9fe] to-white" : "border-slate-200 bg-white"
+              i === 0 && !extraTile ? "border-[#9fcbe7] bg-gradient-to-b from-[#f2f9fe] to-white" : "border-slate-200 bg-white"
             }`}
           >
             <span className="relative h-10 w-10">
               <Image src={f.icon} alt="" fill sizes="80px" className="object-contain" />
             </span>
-            <span className="text-[13px] font-bold leading-tight text-slate-900">{f.name}</span>
-            <span className="text-[11.5px] leading-tight text-slate-500">{f.blurb}</span>
-            <span className="text-[11px] font-bold text-brand">See how ›</span>
+            <span className={`text-[13px] font-bold leading-tight text-slate-900 ${extraTile ? TILE_NAME : ""}`}>{f.name}</span>
+            <span className={`text-[11.5px] leading-tight text-slate-500 ${extraTile ? TILE_BLURB : ""}`}>{f.blurb}</span>
+            <span className={`text-[11px] font-bold text-brand ${extraTile ? "mt-auto" : ""}`}>See how ›</span>
           </button>
-        ))}
+        )).flatMap((tile, i) => (i === 0 && extraTile ? [tile, <div key="extra" className="contents">{extraTile}</div>] : [tile]))}
       </div>
     </section>
   );

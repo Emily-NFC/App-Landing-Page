@@ -40,13 +40,14 @@ function fromReferrer(referrer: string): Attribution {
 }
 
 /**
- * Who sent this visitor. QR codes carry ?court=, our own links carry utm_source
+ * Who sent this visitor. QR codes carry ?court= or ?qr=, our own links carry utm_source
  * (e.g. ?utm_source=newsletter), and anything else falls back to the referrer.
  */
 export function getAttribution(): Attribution {
   if (typeof window === "undefined") return { source: "direct", medium: "direct", campaign: "" };
   const params = new URLSearchParams(window.location.search);
-  const court = clean(params.get("court"));
+  // QR codes carry ?court= or, on the newer codes, ?qr=<code name>; Vegas signs also carry ?s=<sign>.
+  const court = clean(params.get("court")) || clean(params.get("qr")) || clean(params.get("s"));
   if (court) return { source: "qr", medium: "fitness_court", campaign: court };
   const utmSource = clean(params.get("utm_source"));
   if (utmSource) {
