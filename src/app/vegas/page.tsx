@@ -8,7 +8,6 @@ import { CoachesCard } from "@/components/v4/CoachesCard";
 import { MoreWays } from "@/components/v4/MoreWays";
 import { BadgesCardV4 } from "@/components/v4/BadgesCardV4";
 import { FinalCtaV4 } from "@/components/v4/FinalCtaV4";
-import { FooterLinks } from "@/components/v4/FooterLinks";
 import { InfoSheetProvider } from "@/components/v4/InfoSheet";
 import { FeaturesRowV4 } from "@/components/v4/FeaturesRowV4";
 import { MovementsV4 } from "@/components/v4/MovementsV4";
@@ -30,9 +29,8 @@ export default function VegasPage() {
         <TrailLineCard />
         <MovementsV4 />
         <CheckInCard />
-        <MoreWays cardio={{ src: "/vegas/cardio-trail.jpg", alt: "The Trail Line loops beside the Fitness Court® at Bill Briare Park", pos: "object-center" }} />
+        <MoreWays />
         <BadgesCardV4 />
-        <FooterLinks />
         <FinalCtaV4 />
       </main>
     </InfoSheetProvider>

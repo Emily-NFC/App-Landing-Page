@@ -38,7 +38,7 @@ const features: (SheetContent & { name: string; blurb: string })[] = [
 export const TILE_NAME = "flex min-h-[2.5em] items-center";
 export const TILE_BLURB = "min-h-[2.5em]";
 
-/** extraTile: a fourth tile at the end of the row (the Las Vegas page's map). */
+/** extraTile: a fourth tile, second in the row after Guided Workouts (the Las Vegas page's map). */
 export function FeaturesRowV4({ extraTile }: { extraTile?: React.ReactNode } = {}) {
   const openSheet = useInfoSheet();
 
@@ -61,8 +61,7 @@ export function FeaturesRowV4({ extraTile }: { extraTile?: React.ReactNode } = {
             <span className={`text-[11.5px] leading-tight text-slate-500 ${extraTile ? TILE_BLURB : ""}`}>{f.blurb}</span>
             <span className={`text-[11px] font-bold text-brand ${extraTile ? "mt-auto" : ""}`}>See how ›</span>
           </button>
-        ))}
-        {extraTile}
+        )).flatMap((tile, i) => (i === 0 && extraTile ? [tile, <div key="extra" className="contents">{extraTile}</div>] : [tile]))}
       </div>
     </section>
   );

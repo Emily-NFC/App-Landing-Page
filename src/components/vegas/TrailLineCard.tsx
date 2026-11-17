@@ -15,8 +15,8 @@ export function TrailLineCard() {
       <div className="overflow-hidden rounded-2xl bg-[#0A4A2E] text-white shadow-[0_8px_24px_-10px_rgba(10,74,46,0.7)]">
         <ExploreMapLink placement="trail_line_map_image" className="relative block aspect-[780/540] w-full">
           <Image
-            src="/vegas/kellogg.jpg"
-            alt="Illustrated close-up of the Kellogg-Zaher Fitness Court, Trail Line station KL2 and the Bonanza Trail"
+            src="/vegas/bill-briare-bl1-v2.jpg"
+            alt="Illustrated close-up of the Bill Briare Park Fitness Court, Trail Line station BL1 and the park loops"
             fill
             sizes="(max-width: 448px) 100vw, 448px"
             className="object-cover"
